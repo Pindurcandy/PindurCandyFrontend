@@ -114,7 +114,6 @@
 import axios from "axios";
 import sha256 from "sha256";
 export default {
-  name: "Registry",
   props: {
     msg: String,
   },
