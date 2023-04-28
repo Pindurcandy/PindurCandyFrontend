@@ -121,7 +121,7 @@ export default {
     },
     adatlekeres() {
       axios
-        .get("https://192.168.50.39:5001/Termekek/basic")
+        .get("https://localhost:5001/Termekek/basic")
         .then((response) => {
           if (response.status == 200) {
             let d = response.data;
