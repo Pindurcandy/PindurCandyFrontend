@@ -155,7 +155,6 @@ export default {
     },*/
     async registrySubmit() {
       let userSalt = this.generateSalt(64);
-      alert("Kezd");
       let body = {
         id: 0,
         felhasznaloNev: this.FelhasznaloNevReg,
@@ -171,13 +170,11 @@ export default {
         this.FelhasznaloNevReg == "" ||
         this.TeljesNev == ""
       ) {
-        alert("if")
         document.getElementById(
           "szia"
         ).innerHTML = `<div  class="p-1" style="color: red">
                       <p>Töltsön ki minden mezőt!</p> </div>`;
       } else {
-        alert("else")
         await axios
           .post(this.$store.state.API_URL + "Registry", body)
           .then((response) => {
@@ -198,7 +195,6 @@ export default {
           .catch((error) => {
             alert(error);
           });
-        alert(alert("Lefutott"));
         console.log(body);
       }
     },
